@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_run_state"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lv_top"
+            android:paddingTop="@dimen/lv_top">
+
+            <TextView
+                style="@style/tv_home_item_left_style"
+                android:layout_height="wrap_content"
+                android:text="@string/xzyl" />
+
+            <EditText
+                android:id="@+id/et_zxyl"
+
+                style="@style/et_run_states_style" />
+
+            <TextView
+                style="@style/unit_style"
+                android:text="bar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/home_lv_paddingLeft"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jzyl" />
+
+                <EditText
+                    android:id="@+id/et_jzyl"
+                    style="@style/et_run_states_style" />
+
+                <TextView
+                    style="@style/unit_style"
+                    android:text="bar" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lv_top"
+            android:paddingTop="@dimen/lv_top">
+
+            <TextView
+                style="@style/tv_home_item_left_style"
+                android:layout_height="wrap_content"
+                android:text="@string/zxgy" />
+
+            <EditText
+                android:id="@+id/et_zxgy"
+                style="@style/et_run_states_style" />
+
+            <TextView
+                style="@style/unit_style"
+                android:text="bar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yxsj" />
+
+                <EditText
+                    android:id="@+id/et_yxsj"
+                    style="@style/et_run_states_style" />
+
+                <TextView
+                    style="@style/unit_style"
+                    android:text="Hrs" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/jzsj" />
+
+        <EditText
+            android:id="@+id/et_jzsj"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="Hrs" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/klyc" />
+
+        <RadioGroup
+            android:id="@+id/rg_1"
+            style="@style/radiogroup_style">
+
+            <RadioButton
+                android:id="@+id/rb_11"
+                style="@style/radiobutton_style"
+                android:text="正常" />
+
+            <RadioButton
+                android:id="@+id/rb_12"
+                style="@style/radiobutton_style"
+                android:text="异常" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/ylyc" />
+
+        <RadioGroup
+            android:id="@+id/rg_2"
+            style="@style/radiogroup_style">
+
+            <RadioButton
+                android:id="@+id/rb_21"
+                style="@style/radiobutton_style"
+                android:text="正常" />
+
+            <RadioButton
+                android:id="@+id/rb_22"
+                style="@style/radiobutton_style"
+                android:text="异常" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/yfyc" />
+
+        <RadioGroup
+            android:id="@+id/rg_3"
+            style="@style/radiogroup_style">
+
+            <RadioButton
+                android:id="@+id/rb_31"
+                style="@style/radiobutton_style"
+                android:text="正常" />
+
+            <RadioButton
+                android:id="@+id/rb_32"
+                style="@style/radiobutton_style"
+                android:text="异常" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/lv_top"
+            android:paddingTop="@dimen/lv_top">
+
+            <TextView
+                style="@style/tv_home_item_left_style"
+                android:layout_height="wrap_content"
+                android:text="@string/hjwd" />
+
+            <EditText
+                android:id="@+id/et_hjwd"
+                style="@style/et_run_states_style" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/unit_style"
+                android:text="℃" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pqwd" />
+
+                <EditText
+                    android:id="@+id/et_pqwd"
+                    style="@style/et_run_states_style" />
+
+                <TextView
+                    style="@style/unit_style"
+                    android:text="℃" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/zdjdl" />
+
+        <EditText
+            android:id="@+id/et_dl1"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="bar" />
+
+        <EditText
+            android:id="@+id/et_dl2"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="A" />
+
+        <EditText
+            android:id="@+id/et_dl3"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="A" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/zdjdl"
+            android:visibility="invisible" />
+
+        <EditText
+            android:id="@+id/et_dl4"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="A" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/dy" />
+
+        <EditText
+            android:id="@+id/et_dy1"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="V" />
+
+        <EditText
+            android:id="@+id/et_dy2"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="V" />
+
+        <EditText
+            android:id="@+id/et_dy3"
+            style="@style/et_run_states_style" />
+
+        <TextView
+            style="@style/unit_style"
+            android:text="V" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/but_ok"
+        style="@style/subok_but_style"
+        android:text="@string/tj" />
+
+
+</LinearLayout>

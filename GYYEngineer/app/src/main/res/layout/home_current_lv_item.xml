@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans_gray"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="@dimen/home_lv_paddingLeft"
+            android:singleLine="true"
+            android:text="@string/order_number"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16" />
+
+        <TextView
+            android:id="@+id/tv_ddh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingRight="15dp"
+            android:singleLine="true"
+            android:text="0000000000"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16" />
+
+        <TextView
+            android:id="@+id/tv_zt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:paddingRight="@dimen/home_lv_paddingLeft"
+            android:singleLine="true"
+            android:text="等待接单"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/lv_top"
+            android:paddingTop="@dimen/lv_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:text="@string/machine_brand" />
+
+                <TextView
+                    android:id="@+id/tv_jqpp"
+                    style="@style/tv_home_item_right_style"
+                    android:text="盛方" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_home_item_left_style"
+                        android:text="@string/machine_lx" />
+
+                    <TextView
+                        android:id="@+id/tv_jqlx"
+                        style="@style/tv_home_item_right_style"
+                        android:text="离心机" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_home_item_left_style"
+                        android:text="@string/bxqy" />
+
+                    <TextView
+                        android:id="@+id/tv_bxqy"
+                        style="@style/tv_home_item_right_style"
+                        android:text="宝鸡宝石厂" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/tv_home_item_left_style"
+                        android:text="@string/machine_gzms" />
+
+                    <TextView
+                        android:id="@+id/tv_gzms"
+                        style="@style/tv_home_item_right_style"
+                        android:text="机器故障无法开机" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:src="@mipmap/jiantou" />
+    </LinearLayout>
+
+    <View
+        style="@style/LCIMDividerLine.Horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6" />
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:text="@string/bxsj" />
+
+        <TextView
+            android:id="@+id/tv_bxsj"
+            style="@style/tv_home_item_right_style"
+            android:layout_weight="1"
+            android:text="00 ：00 ：00" />
+
+    </LinearLayout>
+</LinearLayout>

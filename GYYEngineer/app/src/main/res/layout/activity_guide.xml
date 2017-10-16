@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RadioGroup
+        android:id="@+id/guide_tabBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        >
+        <RadioButton
+            android:id="@+id/guideButtonOne"
+            android:layout_width="12dp"
+            android:button="@null"
+            android:layout_margin="5dp"
+            android:background="@drawable/selector_guideini"
+            android:layout_height="12dp"
+            android:clickable="false"
+            />
+        <RadioButton
+            android:layout_margin="5dp"
+            android:id="@+id/guideButtonTwo"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:button="@null"
+            android:background="@drawable/selector_guideini"
+            android:clickable="false"
+            />
+        <RadioButton
+            android:id="@+id/guideButtonThree"
+            android:layout_margin="5dp"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:button="@null"
+            android:background="@drawable/selector_guideini"
+            android:clickable="false"
+            />
+    </RadioGroup>
+
+</FrameLayout>

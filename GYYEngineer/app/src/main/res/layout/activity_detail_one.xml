@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_detail_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top"></include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/lv_top"
+            android:paddingTop="@dimen/lv_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:text="@string/jqbh" />
+
+                <TextView
+                    android:id="@+id/tv_jqbh"
+                    style="@style/tv_home_item_right_style"
+                    android:text="" />
+            </LinearLayout>
+
+            <View
+                style="@style/LCIMDividerLine.Horizontal"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:layout_height="wrap_content"
+                    android:text="@string/jqpp" />
+
+                <TextView
+                    android:id="@+id/tv_jqpp"
+                    style="@style/tv_home_item_right_style"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:text="@string/jqlx" />
+
+                <TextView
+                    android:id="@+id/tv_jqlx"
+                    style="@style/tv_home_item_right_style"
+                    android:text="" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/lv_top"
+                android:paddingTop="@dimen/lv_top">
+
+                <TextView
+                    style="@style/tv_home_item_left_style"
+                    android:text="@string/gzms" />
+
+                <TextView
+                    android:id="@+id/tv_gzms"
+                    style="@style/tv_home_item_right_style"
+                    android:text="" />
+            </LinearLayout>
+
+            <TextView
+                style="@style/tv_home_item_left_style"
+                android:text="@string/gztp" />
+
+            <GridView
+                android:id="@+id/gv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:horizontalSpacing="3dp"
+                android:verticalSpacing="3dp"></GridView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="6dp"
+
+                android:background="@color/trans_gray"></LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_engineerMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/lv_top"
+                    android:paddingTop="@dimen/lv_top">
+
+                    <TextView
+                        style="@style/tv_home_item_left_style"
+                        android:text="@string/bxr" />
+
+                    <TextView
+                        android:id="@+id/tv_bxr"
+                        style="@style/tv_home_item_right_style"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/lx"
+                        style="@style/tv_home_item_left_style"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/yellow_wane_rectangle_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="联系" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/lv_top"
+                    android:paddingTop="@dimen/lv_top">
+
+                    <TextView
+                        style="@style/tv_home_item_left_style"
+                        android:text="@string/dh" />
+
+                    <TextView
+                        android:id="@+id/tv_dh"
+                        style="@style/tv_home_item_right_style"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/hj"
+                        style="@style/tv_home_item_left_style"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/yellow_wane_rectangle_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="呼叫" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/lv_top">
+
+                    <TextView
+                        style="@style/tv_home_item_left_style"
+                        android:text="@string/dz" />
+
+                    <TextView
+                        android:id="@+id/tv_dz"
+                        style="@style/tv_home_item_right_style"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="false"
+                        android:text="" />
+
+                    <TextView
+                        android:id="@+id/dh"
+                        style="@style/tv_home_item_left_style"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/yellow_wane_rectangle_bg"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:paddingBottom="6dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="2dp"
+                        android:text="导航"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <kzy.com.gyyengineer.view.MyMeasureList
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></kzy.com.gyyengineer.view.MyMeasureList>
+
+            <Button
+                android:id="@+id/but_ok"
+                style="@style/subok_but_style"
+                android:text="@string/qrjd" />
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

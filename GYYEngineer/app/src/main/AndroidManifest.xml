@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kzy.com.gyyengineer"
+    android:versionCode="1"
+    android:versionName="1.0.1">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+    <!-- baidumap 所需的权限 -start -->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- location -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+
+    <!-- 用于申请获取蓝牙信息进行室内定位 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!-- baidumap 所需的权限 -end -->
+    <!-- jpush 所需的权限 -start -->
+    <!-- Required -->
+    <permission
+        android:name="com.example.jpushdemo.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" />
+
+    <!-- Required  一些系统要求的权限，如访问网络等 -->
+    <uses-permission android:name="com.example.jpushdemo.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- jpush 所需的权限 -end -->
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/LCIMKitTheme"
+        tools:replace="Android:icon, android:theme">
+
+        <!-- 实时通信模块、推送（均需要加入以下声明） START -->
+        <!-- 实时通信模块、推送都要使用 PushService -->
+        <service android:name="com.avos.avoscloud.PushService" />
+
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <!-- 实时通信模块、推送 END -->
+
+        <receiver android:name=".leanchat.service.LeanchatReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="com.avoscloud.chat.INVITATION_ACTION" />
+            </intent-filter>
+        </receiver>
+
+        <service android:name="com.avos.avoscloud.PushService" />
+
+        <receiver android:name=".leanchat.service.NotificationBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.avoscloud.chat.intent.client_notification" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".leanchat.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/LCIMActivity.NoActionBar">
+            <intent-filter>
+                <action android:name="com.avos.leanchart.MAIN_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".leanchat.activity.UpdateContentActivity" />
+        <activity
+            android:name=".leanchat.activity.EntrySplashActivity"
+            android:theme="@style/LCIMActivity.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".leanchat.activity.EntryLoginActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".leanchat.activity.EntryRegisterActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity android:name=".leanchat.friends.ContactNewFriendActivity" />
+        <activity android:name=".leanchat.friends.ContactAddFriendActivity" />
+        <activity android:name=".leanchat.friends.ContactPersonInfoActivity" />
+        <activity android:name=".leanchat.activity.ProfileNotifySettingActivity" />
+        <activity
+            android:name=".leanchat.activity.ConversationGroupListActivity"
+            android:label="@string/conversation_group" />
+        <activity android:name=".leanchat.activity.ConversationDetailActivity" />
+        <activity
+            android:name=".leanchat.activity.ConversationAddMembersActivity"
+            android:label="@string/conversation_inviteMembers" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <meta-data
+            android:name="BaiduMobAd_STAT_ID"
+            android:value="48ae76de3f" />
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="8t8Ibk1dSXZtt62dqI49emGSGBcGgdDw" />
+
+        <activity
+            android:name=".engineer.activity.LoginActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity android:name="kzy.com.gyyengineer.leanchat.ImageBrowserActivity" />
+        <activity
+            android:name=".engineer.activity.RegActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.CheckActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.UserMachineActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.TextActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.AuditActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.AboutActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.ServicePriActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.SettingActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.ChangePwdActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.MipcaActivityCapture"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".engineer.activity.MsgInputActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity android:name=".engineer.activity.GuideActivity" />
+        <activity
+            android:name=".engineer.activity.DetailOneActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.MachineDetailsActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.ImageActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.RunStateActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.PhoningActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.SpotActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.SeeEvaluateActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.GoodSeyActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.GoodSayDetailsActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.MsgInputAndNumberActivity"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.MessageActivity1"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name=".engineer.activity.MessageActivity"
+            android:theme="@style/LCIMActivity.NoActionBar"></activity>
+        <activity
+            android:name="kzy.com.gyyengineer.leanchat.activity.ChatRoomActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kzy.com.gyyengineer.leanchat.ChatRoomActivity2"
+
+            android:screenOrientation="portrait"
+            android:theme="@style/LCIMActivity.NoActionBar" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="android:authorities">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

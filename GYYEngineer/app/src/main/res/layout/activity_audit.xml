@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_user_machine"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+
+        android:orientation="vertical">
+
+        <include layout="@layout/layout_top" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/textview_radius_style"
+            android:ellipsize="end"
+            android:hint="请输入姓名"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/et_namenum"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/textview_radius_style"
+            android:ellipsize="end"
+            android:hint="请输入身份证号"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/textview_radius_style"
+            android:ellipsize="end"
+            android:hint="请输入密码"
+            android:password="true"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <EditText
+            android:id="@+id/et_twoPssword"
+            android:layout_width="match_parent"
+            android:layout_height="45dip"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            android:background="@drawable/textview_radius_style"
+            android:ellipsize="end"
+            android:hint="请再次输入密码"
+            android:password="true"
+            android:singleLine="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#000" />
+
+        <GridView
+            android:id="@+id/gridView1"
+            android:layout_width="fill_parent"
+            android:layout_height="160dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_margin="10dp"
+            android:columnWidth="90dp"
+            android:gravity="center"
+            android:horizontalSpacing="5dp"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"></GridView>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/et_submit"
+        android:layout_width="250dp"
+        android:layout_height="42dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/selector_tijiaopj"
+        android:gravity="center"
+        android:textSize="@dimen/tv_size_18"
+        android:layout_marginBottom="10dp"
+        android:text="提交" />
+</LinearLayout>

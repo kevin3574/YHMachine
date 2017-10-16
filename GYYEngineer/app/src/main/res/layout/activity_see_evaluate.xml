@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_see_evaluate"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top"></include>
+
+    <TextView
+        android:id="@+id/tv_time"
+        style="@style/tv_home_item_left_style"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:text=""
+        android:textSize="@dimen/tv_size_18" />
+
+
+    <TextView
+        android:id="@+id/tv_evaluate"
+        style="@style/tv_home_item_left_style"
+        android:gravity="left"
+        android:paddingBottom="3dp"
+        android:paddingRight="@dimen/home_lv_paddingLeft"
+        android:paddingTop="3dp"
+        android:singleLine="false"
+        android:text=""
+        android:textSize="@dimen/tv_size_18" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="服务质量 "
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rt_zhiliang"
+            style="@style/RatingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:stepSize="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="服务态度 "
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rt_taidu"
+            style="@style/RatingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:stepSize="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="专业性     "
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rt_zhuanye"
+            style="@style/RatingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:stepSize="1" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="及时性     "
+            android:textSize="18sp" />
+
+        <android.support.v7.widget.AppCompatRatingBar
+            android:id="@+id/rt_jishi"
+            style="@style/RatingStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:isIndicator="true"
+            android:stepSize="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

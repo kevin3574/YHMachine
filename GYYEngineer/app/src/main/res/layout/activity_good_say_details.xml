@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_good_say_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <include layout="@layout/goodsay_lv_item_layout"></include>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1.5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@color/bg_gray"></View>
+
+        <RelativeLayout style="@style/good_say_detail_rl_style">
+
+            <TextView
+                style="@style/good_say_detail_tv_left_style"
+                android:text="@string/dqmc" />
+
+            <TextView
+                android:id="@+id/tv_dqmc"
+                style="@style/good_say_detail_tv_right_style"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/good_say_detail_rl_style">
+
+            <TextView
+                style="@style/good_say_detail_tv_left_style"
+                android:layout_alignParentTop="true"
+                android:text="@string/zds" />
+
+            <TextView
+                android:id="@+id/tv_zds"
+                style="@style/good_say_detail_tv_right_style"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/good_say_detail_rl_style">
+
+            <TextView
+                style="@style/good_say_detail_tv_left_style"
+                android:text="@string/hps" />
+
+            <TextView
+                android:id="@+id/tv_hps"
+                style="@style/good_say_detail_tv_right_style"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/good_say_detail_rl_style">
+
+            <TextView
+                style="@style/good_say_detail_tv_left_style"
+                android:text="@string/zps" />
+
+            <TextView
+                android:id="@+id/tv_zps"
+                style="@style/good_say_detail_tv_right_style"
+                android:text="" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            style="@style/good_say_detail_rl_style"
+            android:paddingBottom="20dp">
+
+            <TextView
+                style="@style/good_say_detail_tv_left_style"
+                android:text="@string/cps" />
+
+            <TextView
+                android:id="@+id/tv_cps"
+                style="@style/good_say_detail_tv_right_style"
+                android:text="" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

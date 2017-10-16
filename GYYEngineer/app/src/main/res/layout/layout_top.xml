@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_top"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="@color/machineyellow">
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:gravity="center"
+        android:padding="12dp"
+        android:src="@mipmap/btn_back" />
+
+    <TextView
+        android:id="@+id/tv_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="立即评价"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_tijao"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:background="@android:color/transparent"
+        android:text="提交"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+</RelativeLayout>

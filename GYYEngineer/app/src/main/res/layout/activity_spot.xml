@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_phoning"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_top"></include>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/wxzt"
+            android:textSize="@dimen/tv_size_20" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingLeft="@dimen/home_lv_paddingLeft"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            android:id="@+id/yjj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_tv3"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/yjj"
+            android:textColor="@color/select_tv"
+            android:textSize="@dimen/tv_size_16" />
+
+        <TextView
+            android:id="@+id/wjj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/selector_tv3"
+            android:gravity="center"
+            android:paddingBottom="5dp"
+
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="5dp"
+            android:text="@string/wjj"
+            android:textColor="@color/select_tv"
+            android:textSize="@dimen/tv_size_16" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:layout_height="wrap_content"
+            android:text="@string/wxxq1"
+            android:textSize="@dimen/tv_size_20" />
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_wxxq"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="10.0dip"
+        android:autoLink="all"
+        android:background="@drawable/et_bg"
+        android:gravity="top"
+        android:hint="    请输入维修详情"
+        android:inputType="textMultiLine"
+        android:maxLength="100"
+        android:padding="5.0dip"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="15.0dip"
+        android:paddingRight="15.0dip"
+        android:textColor="@color/black"
+        android:textSize="16.0sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_pgdh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/lv_top"
+        android:paddingTop="@dimen/lv_top">
+
+        <TextView
+            style="@style/tv_home_item_left_style"
+            android:text="@string/pgdh" />
+
+        <TextView
+            android:id="@+id/tv_pgdh"
+            style="@style/tv_home_item_right_style"
+            android:text="" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_jqbh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/tv_jqbh"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/et_bg"
+            android:gravity="center_vertical"
+            android:hint="@string/hint_jqxlh"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/but_ok"
+        style="@style/subok_but_style"
+        android:text="@string/tj" />
+</LinearLayout>

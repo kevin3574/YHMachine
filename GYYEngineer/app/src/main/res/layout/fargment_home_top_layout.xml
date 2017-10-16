@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/order_num"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:button="@null"
+            android:gravity="center"
+            android:paddingBottom="@dimen/lv_tv_paddingBottom"
+            android:paddingTop="@dimen/lv_tv_paddingBottom"
+            android:text="@string/month_order_num"
+            android:textColor="@color/black"
+            android:textSize="@dimen/tv_size_18" />
+
+        <Button
+            android:id="@+id/but_ouder"
+            android:layout_width="65dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="@dimen/lv_tv_paddingBottom"
+            android:background="@drawable/month_but" />
+    </RelativeLayout>
+
+    <kzy.com.gyyengineer.view.CirclePercentView
+        android:id="@+id/circleView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/lv_tv_paddingBottom"
+        app:centerTextSize="16sp"
+        app:stripeWidth="15dp" />
+
+</LinearLayout>
